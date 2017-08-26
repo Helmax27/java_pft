@@ -20,7 +20,7 @@ public class ContactDeletionTests {
     }
     
     @Test
-    public void ContactDeletionTests() {
+    public void testContactDeletion() {
         wd.get("http://localhost/addressbook/");
         wd.findElement(By.name("user")).click();
         wd.findElement(By.name("user")).clear();
@@ -29,8 +29,8 @@ public class ContactDeletionTests {
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys("secret");
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
-        if (!wd.findElement(By.id("11")).isSelected()) {
-            wd.findElement(By.id("11")).click();
+        if (!wd.findElement(By.xpath("//dev[@id='*']")).isSelected()) {
+            wd.findElement(By.xpath("//dev[@id='*']")).click();
         }
         wd.findElement(By.xpath("//div[@id='content']/form[2]/div[2]/input")).click();
     }
