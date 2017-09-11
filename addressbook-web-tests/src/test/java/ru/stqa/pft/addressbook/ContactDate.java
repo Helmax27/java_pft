@@ -1,5 +1,9 @@
 package ru.stqa.pft.addressbook;
 
+import org.testng.annotations.Test;
+
+@Test (enabled = false)
+
 public class ContactDate {
   private final String firstname;
   private final String lastname;

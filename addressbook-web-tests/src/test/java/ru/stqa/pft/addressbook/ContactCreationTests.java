@@ -1,19 +1,19 @@
 package ru.stqa.pft.addressbook;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.*;
-
 public class ContactCreationTests {
   FirefoxDriver wd;
 
-  @BeforeMethod
+  @BeforeMethod (enabled = false)
   public void setUp() throws Exception {
     wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -31,7 +31,7 @@ public class ContactCreationTests {
     wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
   }
 
-  @Test
+  @Test (enabled = false)
   public void testContactCreation() {
     gotoAddNewPage();
     fillContactForm(new ContactDate("Alena", "Pavlova", "+380504011928", "apavlova@gmail.com"));
@@ -66,7 +66,7 @@ public class ContactCreationTests {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterMethod
+  @AfterMethod (enabled = false)
   public void tearDown() {
     wd.quit();
   }
