@@ -50,7 +50,6 @@ public class ApplicationManager {
   }
 
 
-
   public void stop() {
     wd.quit();
   }

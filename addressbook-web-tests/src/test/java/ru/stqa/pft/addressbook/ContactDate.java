@@ -2,7 +2,7 @@ package ru.stqa.pft.addressbook;
 
 import org.testng.annotations.Test;
 
-@Test (enabled = false)
+@Test(enabled = false)
 
 public class ContactDate {
   private final String firstname;

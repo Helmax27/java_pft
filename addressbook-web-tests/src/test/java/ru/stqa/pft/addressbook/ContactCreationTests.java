@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class ContactCreationTests {
   FirefoxDriver wd;
 
-  @BeforeMethod (enabled = false)
+  @BeforeMethod(enabled = false)
   public void setUp() throws Exception {
     wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -31,7 +31,7 @@ public class ContactCreationTests {
     wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
   }
 
-  @Test (enabled = false)
+  @Test(enabled = false)
   public void testContactCreation() {
     gotoAddNewPage();
     fillContactForm(new ContactDate("Alena", "Pavlova", "+380504011928", "apavlova@gmail.com"));
@@ -66,7 +66,7 @@ public class ContactCreationTests {
     wd.findElement(By.linkText("add new")).click();
   }
 
-  @AfterMethod (enabled = false)
+  @AfterMethod(enabled = false)
   public void tearDown() {
     wd.quit();
   }
